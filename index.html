@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CipherCrack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="gameTitle">CipherCrack</div>
+
+  <!-- Overlays -->
+  <div id="overlays">
+    <div id="howToPlay" style="display: block;">
+      <h2>Decrypt the hidden words across 10 levels.</h2>
+      <p>You have 7 attempts in total.</p>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="gameOver" style="display: none;">
+      <h2>Game Over</h2>
+      <button onclick="restartGame()">Try Again</button>
+    </div>
+    <div id="gameWin" style="display: none;">
+      <h2>Congratulations! You've Completed All Levels!</h2>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Game Area -->
+  <div id="gameArea" style="display: none;">
+    <div class="game-content">
+      <p>Decrypt the word. You have 7 attempts.</p>
+      <div id="word"></div>
+      <div id="hint"></div>
+    </div>
+    <div class="keyboard" id="keyboard"></div>
+    <div class="controls">
+      <p id="attempts">Attempts Remaining: 7</p>
+      <p id="level">Level: 1</p>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
