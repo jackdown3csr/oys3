@@ -50,25 +50,25 @@ body {
 .key-row {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
   width: 100%;
 }
 
 .key {
   background-color: #D47756;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 2rem;
   cursor: pointer;
   color: #FDFCFB;
   text-shadow: 0px 0px 3px #000000;
-  padding: 6px;
+  padding: 8px;
   box-shadow: 0 0 5px #666666;
   background: linear-gradient(145deg, #D25646, #D47756);
   transform: scale(1);
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  width: 18%;
-  height: 28px;
+  width: 20%;
+  height: 26px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
