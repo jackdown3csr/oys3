@@ -38,14 +38,15 @@ body {
 }
 
 .keyboard {
-  width: 80%; /* Adjusted width to fit within the background frame */
+  width: 80%;
   margin: 0 auto;
-  margin-top: 10px; /* Centers the keyboard horizontally */
+  margin-top: 10px;
   background: #111111;
   padding: 1px;
   border-radius: 10px;
   box-shadow: 0 0 10px #666666;
 }
+
 .key-row {
   display: flex;
   justify-content: center;
@@ -54,35 +55,36 @@ body {
 }
 
 .key {
-  background: linear-gradient(145deg, #D25646, #D47756);
-  border: 1px solid #666666;
+  background-color: #D47756;
+  border: none;
   border-radius: 5px;
-  color: #FDFCFB;
-  padding: 15px;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 2rem;
   cursor: pointer;
-  text-align: center;
-  width: 20%; /* Adjusted for mobile */
-  height: 50px;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  color: #FDFCFB;
+  text-shadow: 0px 0px 3px #000000;
+  padding: 15px;
   box-shadow: 0 0 5px #666666;
+  background: linear-gradient(145deg, #D25646, #D47756);
+  transform: scale(1);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  width: 20%;
+  height: 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
+.key:hover:not(.disabled) {
+  background-color: #D47756;
+  transform: scale(1.15);
+  box-shadow: 0 0 10px #D47756;
+}
+
 .key.disabled {
-  background: #1a1a1a;
+  background-color: #1a1a1a;
   color: #666666;
   cursor: not-allowed;
   box-shadow: none;
-}
-
-.key:hover:not(.disabled) {
-  background: #D47756;
-  transform: scale(1.15);
-  box-shadow: 0 0 10px #D47756;
 }
 
 #gameArea {
@@ -108,10 +110,9 @@ body {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px #f49756;
- 
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 #hint {
@@ -119,7 +120,6 @@ body {
   font-size: 2rem;
   font-style: italic;
   color: #f49756;
-  
   padding: 10px;
   border-radius: 10px;
 }
@@ -135,7 +135,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
-  opacity: 1; /* Changed from 0 to 1 */
+  opacity: 1;
   animation: none;
 }
 
@@ -144,40 +144,63 @@ body {
   animation: fadeIn 0.5s ease;
 }
 
-#gameOver, #gameWin {
+#gameOver, #gameWin, #howToPlay {
   background: linear-gradient(to bottom, #000000, #222222);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   color: #f49756;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 5vw;
+  align-items: center;
+  text-align: center; /* Add this */
   z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-#gameOver button, #gameWin button {
-  margin-top: 20px;
-  padding: 15px 30px;
+#gameOver h2, #gameWin h2, #howToPlay h2 {
+  font-size: clamp(2rem, 8vw, 4rem); /* Responsive font size */
+  margin: 10px 0;
+  max-width: 80%; /* Adjusted */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  display: inline-block;
+}
+
+#gameOver p, #gameWin p, #howToPlay p {
+  white-space: normal;
+  max-width: 80%; /* Adjusted */
+  margin: 20px auto; /* Centered */
+  font-size: clamp(2rem, 8vw, 4rem); /* Responsive font size */
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+
+
+#gameOver button, #gameWin button, #howToPlay button, .game-button {
   background-color: #D47756;
   border: none;
   border-radius: 5px;
-  font-size: 1.5vw;
+  font-size: 1vw;
   cursor: pointer;
   color: #FDFCFB;
   text-shadow: 0px 0px 3px #000000;
-}
-
-#gameOver button:hover, #gameWin button:hover {
+  padding: 8px 10px;
+  box-shadow: 0 0 5px #666666;
   background-color: #D25646;
   color: #FDFCFB;
+  box-shadow: 0 0 10px #D47756;
+  margin: 20px;
 }
 
-/* Mobile-first styles - these will apply by default */
 @media (max-width: 768px) {
   #word {
     font-size: 3rem;
@@ -185,25 +208,64 @@ body {
   #hint {
     font-size: 1.5rem;
   }
-  #gameOver h2, #gameWin h2 {
-    font-size: 6vw;
+  #gameOver h2, #gameWin h2, #howToPlay h2 {
+    font-size: 3vw;
   }
-  #gameOver button, #gameWin button {
-    font-size: 2vw;
+  #gameOver button, #gameWin button, #howToPlay button {
+    font-size: 3vw;
   }
-
-  /* Adjust key button layout for mobile */
   .key {
-    width: 15%; /* Increase size for better touch targets on mobile */
+    width: 15%;
+  }
+  #gameOver, #gameWin, #howToPlay {
+    width: 90%;
+    left: 5%; /* Centered */
+    font-size: 5vw;
+  }
+  #gameOver p, #gameWin p, #howToPlay p {
+    max-width: 90%;
+    font-size: 3vw;
+  }
+  #howToPlay button {
+    font-size: 4vw;
   }
 }
 
-/* Word reveal animation */
+@media (min-width: 769px) {
+  .key {
+    width: 8%;
+  }
+  #word {
+    font-size: 4rem;
+  }
+  #hint {
+    font-size: 2rem;
+  }
+  #gameOver h2, #gameWin h2, #howToPlay h2 {
+    font-size: 2vw;
+    margin: 0;
+  }
+  #gameOver button, #gameWin button, #howToPlay button, .game-button {
+    font-size: 2vw;
+  }
+  #gameOver, #gameWin, #howToPlay {
+    width: 60%;
+    left: 20%;
+    font-size: 3vw;
+  }
+  #gameOver p, #gameWin p, #howToPlay p {
+    max-width: 70%;
+    font-size: 2vw;
+  }
+  #howToPlay button {
+    font-size: 2vw;
+  }
+}
+
 .word-reveal-animation {
   animation: revealWord 1s ease-out forwards;
 }
 
-/* Level indicator fade-in animation */
 .level-reveal-animation {
   animation: fadeInLevel 1s ease-out forwards;
 }
@@ -228,25 +290,34 @@ body {
   }
 }
 
-/* Larger screens (tablet and above) */
-@media (min-width: 769px) {
-  .key {
-    width: 8%; /* Set width back to 8% for larger screens */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
 
-  #word {
-    font-size: 4rem; /* Larger word size for desktop */
-  }
+.word-fade-out {
+  animation: fadeOut 1.5s forwards;
+}
 
-  #hint {
-    font-size: 2rem; /* Larger hint font */
+@keyframes levelIncrease {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  #gameOver h2, #gameWin h2 {
-    font-size: 5vw;
+  50% {
+    transform: translateY(-30px);
+    opacity: 0.8;
   }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-  #gameOver button, #gameWin button {
-    font-size: 1.5vw;
-  }
+.level-up {
+  animation: levelIncrease 1.5s ease-in-out forwards;
 }

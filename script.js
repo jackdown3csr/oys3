@@ -5,11 +5,41 @@ let currentHint = "";
 let attemptsRemaining = 7;
 let level = 0;
 let maxLevels = 10;
+let isOverlayActive = false; // Added flag to track overlay activity
 
 const successSound = new Audio("success.mp3");
 const errorSound = new Audio("error.mp3");
 const winSound = new Audio("win.mp3");
 const loseSound = new Audio("lose.mp3");
+
+let backgroundMusic; // Variable to hold the background music
+
+// Function to load random background music
+function loadBackgroundMusic() {
+  const musicFiles = ['bgmusic/bgmusic1.mp3', 'bgmusic/bgmusic2.mp3']; // Add your music file names here
+  const randomMusicFile = musicFiles[Math.floor(Math.random() * musicFiles.length)];
+  
+  backgroundMusic = new Audio(randomMusicFile);
+  backgroundMusic.loop = true; // Set the music to loop
+  backgroundMusic.volume = 0.5; // Set the volume to 50%
+}
+
+// Function to play background music
+function playBackgroundMusic() {
+  if (backgroundMusic) {
+    backgroundMusic.play().catch(error => {
+      console.log("Background music playback failed due to: ", error);
+    });
+  }
+}
+
+// Function to stop background music
+function stopBackgroundMusic() {
+  if (backgroundMusic) {
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
+  }
+}
 
 async function loadWords() {
   const response = await fetch("slova.txt");
@@ -37,9 +67,16 @@ function toggleOverlay(overlayId) {
   // Show the specified overlay if it's inside #overlays
   if (document.getElementById(overlayId).parentElement.id === 'overlays') {
     document.getElementById(overlayId).style.display = "block";
+    isOverlayActive = true; // Set flag to true when an overlay is active
+    // Set focus on the button inside the overlay
+    const button = document.getElementById(overlayId).querySelector('button');
+    if (button) {
+      button.focus();
+    }
   } else {
     // Handle elements outside of #overlays
     document.getElementById(overlayId).style.display = "block";
+    isOverlayActive = false; // Set flag to false when game area is active
   }
   
   if (overlayId === "gameOver" || overlayId === "gameWin") {
@@ -50,6 +87,7 @@ function toggleOverlay(overlayId) {
 }
 
 function startGame() {
+  loadBackgroundMusic(); // Load background music
   loadWords().then(() => {
     shuffleArray(wordsAndHints);
     maxLevels = Math.min(wordsAndHints.length, 10);
@@ -58,11 +96,15 @@ function startGame() {
     usedKeys.clear();
     createVirtualKeyboard();
     toggleOverlay("gameArea");
+    isOverlayActive = false; // Set flag to false when starting the game
     nextLevel();
+    playBackgroundMusic(); // Play background music when starting the game
   });
 }
 
 function restartGame() {
+  stopBackgroundMusic(); // Stop the current background music
+  loadBackgroundMusic(); // Load a new random background music
   loadWords().then(() => {
     shuffleArray(wordsAndHints);
     maxLevels = Math.min(wordsAndHints.length, 10);
@@ -72,7 +114,8 @@ function restartGame() {
     createVirtualKeyboard();
     toggleOverlay("howToPlay");
     document.getElementById("gameArea").style.display = "none";
-    document.getElementById("gameArea").style.pointerEvents = "auto"; // Enable interactions
+    isOverlayActive = true; // Set flag to true when restarting the game
+    playBackgroundMusic(); // Play the new background music
   });
 }
 
@@ -100,6 +143,7 @@ function nextLevel() {
 }
 
 function handleKeyPress(key) {
+  if (isOverlayActive) return; // Do not process key presses if an overlay is active
   key = key.toUpperCase();
   if (!/^[A-Z]$/.test(key) || usedKeys.has(key)) return;
 
@@ -140,8 +184,21 @@ function checkWinCondition() {
     .every(letter => letter.textContent !== "X");
 
   if (allLettersRevealed) {
-    level++;
-    nextLevel();
+    // Add fade out animation to the current word
+    document.getElementById("word").classList.add("word-fade-out");
+    // Add animation to level display
+    document.getElementById("level").classList.add("level-increase");
+    // Prevent key presses during transition
+    isOverlayActive = true;
+    setTimeout(() => {
+      level++;
+      nextLevel();
+      // Reset flag after transition
+      isOverlayActive = false;
+      // Remove fade out class after transition
+      document.getElementById("word").classList.remove("word-fade-out");
+      document.getElementById("level").classList.remove("level-increase");
+    }, 1500); // 1.5 second delay
   }
 }
 
@@ -184,6 +241,13 @@ function createVirtualKeyboard() {
     keyboard.appendChild(rowDiv);
   });
 }
+
+// Add event listener for Enter key press
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter' && event.target.tagName === 'BUTTON' && event.target.closest('#overlays')) {
+    event.target.click();
+  }
+});
 
 document.addEventListener("keydown", event => {
   if (document.getElementById("gameArea").style.display === "block") {
