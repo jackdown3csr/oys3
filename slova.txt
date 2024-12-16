@@ -1,93 +1,11 @@
-Decentralize, Distribute control across a network
-Governance, Decision-making framework in decentralized systems
-Reputation, Measure of verified social capital
-Blockchain, Secure, distributed ledger for transactions
-Sovereignty, Control over personal data and decisions
-Compliance, Adherence to rules in decentralized systems
-Identity, Digital representation in the network
-Cryptography, Securing communication and transactions
-Innovation, Introducing new solutions in decentralized tech
-Sybil, Fake identities used to manipulate the network
-Protocol, Set of rules for data exchange
-Privacy, Protection of individual data in networks
-Citizen, A participant in decentralized governance
-Transaction, Process of transferring assets or information
-Validator, Entity verifying blockchain transactions
-Smart Contract, Self-executing contract in code
-Transparency, Open visibility of decentralized operations
-Reg Tech, Technology for regulatory compliance in Web3
-zk KYC, Privacy-preserving identity verification system
-Consensus, Reaching agreement in decentralized systems
-Distributed, Spread across multiple nodes in a network
-Interoperability, Ability for blockchains to work together
-Reputation Root, Core contract governing reputation decisions
-On Chain, Actions recorded directly on the blockchain
-Token, Digital asset representing value
-DAO, Decentralized autonomous organization
-DeFi, Decentralized finance without intermediaries
-Guardians, Protectors ensuring network integrity
-Sovereign, Leader with authority over personal data
-Citizen Node, Node representing a participant in the network
-Proof Of Stake, Consensus mechanism based on token holding
-Staking, Locking tokens to secure a blockchain
-Validator Node, Node verifying blockchain transactions
-zk Certificate, Cryptographic certificate using zero-knowledge proofs
-Subsidy, Financial support to incentivize network participation
-Tokenomics, Economic structure of a token in Web3
-Distributed Ledger, Ledger spread across decentralized nodes
-Validator Pool, Group of validators securing the network
-Governance Token, Token granting voting rights in governance
-Bridges, Mechanisms allowing blockchain communication
-Node, Device maintaining the blockchain network
-Ecosystem, Interconnected network of projects and participants
-Liquidity, Ease of asset exchange or conversion
-Collaboration, Working together across decentralized platforms
-Incentive, Reward designed to encourage network participation
-Auditing, Verifying compliance and integrity of transactions
-Interchain, Communication between multiple blockchain networks
-Scalability, Network’s ability to handle growth
-Tokenization, Converting assets into digital tokens
-Sybil Attack, Manipulating a network with fake identities
-ZK Proof, Verifying information without revealing data
-Smart Assets, Digital assets governed by smart contracts
-Transparency Layer, Layer ensuring transparency in operations
-Layered Security, Multiple protection layers in a system
-Trustless, System relying on cryptographic guarantees, not trust
-Interoperable, Ability to work together effectively
-Zero Knowledge, Cryptographic method for verification without data exposure
-Decentralized Finance, Financial services without intermediaries
-Yield Farming, Earning rewards by providing liquidity in DeFi
-Smart Contracts, Blockchain agreements executed automatically
-Validator Rewards, Compensation for validators securing the network
-Cross Chain, Interaction between different blockchain platforms
-Governance DAO, Decentralized organization focused on governance
-zk State, Privacy-preserving state model using zero-knowledge proofs
-Open Source, Software with publicly available code
-Tokenized, Converting assets into tradable digital tokens
-Digital Assets, Assets in digital form for trading
-Decentralized Autonomy, Self-governance in decentralized systems
-Privacy First, Philosophy prioritizing protection of user data
-Accountable, Responsibility for actions within a decentralized system
-Reputation Token, Token reflecting one’s reputation in the system
-Cypher State, State built on privacy and decentralization principles
-zk Identity, Privacy-preserving digital identity system
-On Chain Governance, Decision-making directly on the blockchain
-Decentralized Identity, User-controlled personal data system
-Consensus Mechanism, Method of agreement in decentralized networks
-Digital Sovereignty, Control over digital identity and data
-Private Key, Secret key securing digital assets
-Public Key, Cryptographic key verifying transactions or ownership
-Smart Asset Contracts, Agreements involving digital assets
-Future Tech, Emerging technologies in decentralized ecosystems
-Regulatory Compliance, Adherence to legal frameworks in Web3
-DAO Reputation, Reputation within a decentralized autonomous organization
-Blockchain Security, Measures to protect blockchain data
-Distributed Consensus, Reaching agreement across a decentralized network
-Data Privacy, Protecting user data in decentralized systems
-Trustless Ecosystem, Ecosystem operating without mutual trust
-Resilience, Ability to recover from disruptions or attacks
-Scalable, Ability to handle more users or transactions
-Digital Rights, Rights associated with managing digital assets
-Data Integrity, Ensuring accuracy across decentralized networks
-User Empowerment, Users controlling their data and identity
-Open Governance, Transparent decision-making in governance systems
+galactica,our beloved
+town hall,friday
+japonec,nakonec
+love,love
+citizen,ceo
+pill,pill
+ace,ace
+base,base
+vaa,vaa
+idi,idi
+pidi,pidi

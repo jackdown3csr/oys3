@@ -31,8 +31,16 @@ function shuffleArray(array) {
 }
 
 function toggleOverlay(overlayId) {
+  // Hide all overlays
   document.querySelectorAll("#overlays > div").forEach(div => div.style.display = "none");
-  document.getElementById(overlayId).style.display = "block";
+  
+  // Show the specified overlay if it's inside #overlays
+  if (document.getElementById(overlayId).parentElement.id === 'overlays') {
+    document.getElementById(overlayId).style.display = "block";
+  } else {
+    // Handle elements outside of #overlays
+    document.getElementById(overlayId).style.display = "block";
+  }
   
   if (overlayId === "gameOver" || overlayId === "gameWin") {
     document.getElementById("gameArea").style.pointerEvents = "none"; // Disable interactions
@@ -48,6 +56,7 @@ function startGame() {
     level = 0;
     attemptsRemaining = 7;
     usedKeys.clear();
+    createVirtualKeyboard();
     toggleOverlay("gameArea");
     nextLevel();
   });
@@ -60,6 +69,7 @@ function restartGame() {
     level = 0;
     attemptsRemaining = 7;
     usedKeys.clear();
+    createVirtualKeyboard();
     toggleOverlay("howToPlay");
     document.getElementById("gameArea").style.display = "none";
     document.getElementById("gameArea").style.pointerEvents = "auto"; // Enable interactions
@@ -87,10 +97,6 @@ function nextLevel() {
   initializeWord();
   document.getElementById("hint").textContent = `Hint: ${currentHint}`;
   updateUI();
-
-  animateWordAndLevel(); // Animate the word and level indicator
-
-  toggleOverlay("gameArea"); // Ensures game area is visible
 }
 
 function handleKeyPress(key) {
@@ -186,24 +192,6 @@ document.addEventListener("keydown", event => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  initializeGame();
+  // Initialize any necessary functions here
+  // For this game, initialization is handled by startGame()
 });
-
-function initializeGame() {
-  createVirtualKeyboard();
-}
-
-function animateWordAndLevel() {
-  const wordDisplay = document.getElementById("word");
-  const levelIndicator = document.getElementById("level");
-
-  // Add animation class to word and level indicator
-  wordDisplay.classList.add("word-reveal-animation");
-  levelIndicator.classList.add("level-reveal-animation");
-
-  // Reset the animation classes after the animation completes
-  setTimeout(() => {
-    wordDisplay.classList.remove("word-reveal-animation");
-    levelIndicator.classList.remove("level-reveal-animation");
-  }, 1000); // Duration must match the CSS animation duration
-}
