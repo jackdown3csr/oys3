@@ -19,20 +19,24 @@
       <button class="game-button" onclick="startGame()">Start Game</button>
     </div>
     <div id="gameOver" style="display: none;">
-      <h2>Game Over</h2>
-      <p>It seems the OYS2 system got the best of you this time. The puzzle isn't solved yet... try again!</p>
+      <h2>== OYS2 SYSTEM MESSAGE ==</h2>
+      <p>It seems the OYS2 system has outpaced you this time. The puzzle remains unsolved... You must try again to decrypt the remaining terms and complete your mission. Time is of the essence.</p>
       <button class="game-button" onclick="restartGame()">Try Again</button>
     </div>
+    
     <div id="gameWin" style="display: none;">
-      <h2>Congratulations! You've Completed All Levels!</h2>
-      <button class="game-button" onclick="restartGame()">Play Again</button>
+      <h2>== OYS2 SYSTEM MESSAGE ==</h2>
+      <p>
+        You successfully decrypted the network's deepest secrets, but the gate has already closed. For now, its mysteries remain beyond reach. 
+        Take pride in your success—another opportunity may arise when the stars align again. Until then, stay vigilant and ready.</p>
+      <button class="game-button" onclick="redirect()">At least show me </button>
     </div>
-  </div>
 
   <!-- Game Area -->
   <div id="gameArea" style="display: none;">
     <div class="game-content">
       <p id="attempts">Attempts Remaining: 7</p>
+      
       <div class="word-container">
         <div id="word">
           <!-- letters here -->
@@ -42,14 +46,23 @@
     </div>
     <div class="keyboard" id="keyboard"></div>
     <div class="controls">
-      
+      <div id="level">
       <p id="level">Level: 1</p>
+    </div>
+    <div id="soundvolume">
+      <span>music</span>
+      <input type="range" id="soundslider" class="slider" min="0" max="100" value="50">
+    </div>
+    <div id="sfxvolume">
+      <span>sound</span>
+      <input type="range" id="sfxslider" class="slider" min="0" max="100" value="50">
+    
     </div>
   </div>
 
   <!-- Hidden audio element for background music -->
   <audio id="bgMusic" style="display:none;"></audio>
 
-  <script src="script.js"></script>
+  <script src="script.obfuscated.js"></script>
 </body>
 </html>

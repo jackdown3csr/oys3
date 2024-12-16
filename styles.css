@@ -25,7 +25,7 @@ body {
 }
 
 #gameTitle {
-  font-size: 5vw;
+  font-size: 4vw;
   margin-bottom: 10px;
 }
 
@@ -62,13 +62,13 @@ body {
   cursor: pointer;
   color: #FDFCFB;
   text-shadow: 0px 0px 3px #000000;
-  padding: 15px;
+  padding: 8px;
   box-shadow: 0 0 5px #666666;
   background: linear-gradient(145deg, #D25646, #D47756);
   transform: scale(1);
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   width: 20%;
-  height: 30px;
+  height: 28px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +86,12 @@ body {
   cursor: not-allowed;
   box-shadow: none;
 }
-
+#level {
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: clamp(0.8rem, 1vw, 1.2rem); /* Responsive font size */
+}
 #gameArea {
   display: flex;
   flex-direction: column;
@@ -106,37 +111,35 @@ body {
 #word {
   display: inline-block;
   align-items: center;
-  white-space: nowrap;
-  font-size: 4rem;
+  white-space: nowrap; /* Prevent wrapping */
+  font-size: clamp(2rem, 8vw, 4rem); /* Responsive font size */
   font-weight: bold;
-  text-shadow: 2px 2px 4px #f49756;
-  padding: 10px;
+  text-shadow: 2px 2px 4px #522200;
+  padding: 6px;
   border-radius: 10px;
   margin-bottom: 10px;
+  max-width: 90%; /* Limit the width of the word container */
+  margin: 0 auto; /* Center the word container */
 }
 
+
+#attempts{
+  font-size: 2vw;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
 #hint {
   display: block;
   font-size: 2rem;
   font-style: italic;
   color: #f49756;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 6px;
+  border-radius: 6px;
 }
 
 .word-container {
   width: 100%;
   text-align: center;
-}
-
-#word .letter {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 4rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
-  opacity: 1;
-  animation: none;
 }
 
 #word .letter.letter-reveal {
@@ -183,8 +186,6 @@ body {
   word-break: break-word;
 }
 
-
-
 #gameOver button, #gameWin button, #howToPlay button, .game-button {
   background-color: #D47756;
   border: none;
@@ -202,30 +203,33 @@ body {
 }
 
 @media (max-width: 768px) {
-  #word {
-    font-size: 3rem;
-  }
   #hint {
     font-size: 1.5rem;
   }
+
   #gameOver h2, #gameWin h2, #howToPlay h2 {
     font-size: 3vw;
   }
+
   #gameOver button, #gameWin button, #howToPlay button {
     font-size: 3vw;
   }
+
   .key {
-    width: 15%;
+    width: 10%;
   }
+
   #gameOver, #gameWin, #howToPlay {
     width: 90%;
     left: 5%; /* Centered */
     font-size: 5vw;
   }
+
   #gameOver p, #gameWin p, #howToPlay p {
     max-width: 90%;
     font-size: 3vw;
   }
+
   #howToPlay button {
     font-size: 4vw;
   }
@@ -235,28 +239,31 @@ body {
   .key {
     width: 8%;
   }
-  #word {
-    font-size: 4rem;
-  }
+
   #hint {
     font-size: 2rem;
   }
+
   #gameOver h2, #gameWin h2, #howToPlay h2 {
     font-size: 2vw;
     margin: 0;
   }
+
   #gameOver button, #gameWin button, #howToPlay button, .game-button {
     font-size: 2vw;
   }
+
   #gameOver, #gameWin, #howToPlay {
     width: 60%;
     left: 20%;
     font-size: 3vw;
   }
+
   #gameOver p, #gameWin p, #howToPlay p {
     max-width: 70%;
     font-size: 2vw;
   }
+
   #howToPlay button {
     font-size: 2vw;
   }

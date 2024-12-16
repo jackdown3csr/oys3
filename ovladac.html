@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider s hudbou</title>
+  <style>
+    /* Styl pro slider */
+    .slider-container {
+      width: 80%; /* Nastavte šířku podle potřeby */
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .slider {
+      width: 100%;
+      height: 10px; /* Výška posuvníku */
+      background: linear-gradient(145deg, #D25646, #D47756); /* Gradient, který ladí s barvami */
+      border-radius: 10px;
+      -webkit-appearance: none;
+      appearance: none;
+      outline: none;
+      transition: background 0.3s ease-in-out;
+    }
+
+    /* Styl pro slider thumb (koulí) */
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: #f49756; /* Barva thumbs */
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px #D47756;
+      transition: background-color 0.3s ease;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background-color: #f49756;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px #D47756;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Efekt při najetí na slider */
+    .slider:hover::-webkit-slider-thumb {
+      background-color: #D47756; /* Změna barvy koule na hover */
+    }
+
+    .slider:hover::-moz-range-thumb {
+      background-color: #D47756; /* Změna barvy koule na hover */
+    }
+
+    /* Zaoblení okrajů slideru */
+    .slider-container {
+      border-radius: 15px;
+      padding: 10px;
+      background: #111111;
+      box-shadow: 0 0 15px #666666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slider -->
+  <div class="slider-container">
+    <input type="range" id="slider" class="slider" min="0" max="100" value="50">
+  </div>
+
+  <!-- Audio soubor -->
+  <audio id="bgmusic" loop>
+    <source src="bgmusic/bgmusic1.mp3" type="audio/mp3">
+    Váš prohlížeč nepodporuje tag audio.
+  </audio>
+
+  <script>
+    // Získání slideru a audio elementu
+    const slider = document.getElementById('slider');
+    const bgMusic = document.getElementById('bgmusic');
+
+    // Přehrávání hudby při načtení stránky
+    window.onload = function() {
+      bgMusic.play();
+    };
+
+    // Úprava hlasitosti podle hodnoty slideru
+    slider.addEventListener('input', function() {
+      // Nastavení hlasitosti audio souboru podle pozice slideru
+      const volume = slider.value / 100;
+      bgMusic.volume = volume;
+    });
+  </script>
+
+</body>
+</html>
