@@ -141,7 +141,7 @@ function startGame() {
     level = 0;
     attemptsRemaining = 7;
     usedKeys.clear();
-    createVirtualKeyboard();
+   
     toggleOverlay("gameArea"); // This will start the background music
     isOverlayActive = false;
     nextLevel();
@@ -158,7 +158,7 @@ function restartGame() {
     level = 0;
     attemptsRemaining = 7;
     usedKeys.clear();
-    createVirtualKeyboard();
+  
     toggleOverlay("howToPlay"); // This will stop the background music
     isOverlayActive = true;
   });
@@ -264,31 +264,7 @@ function initializeWord() {
     .join("");
 }
 
-// Function to create virtual keyboard
-function createVirtualKeyboard() {
-  const keyboard = document.getElementById("keyboard");
-  keyboard.innerHTML = "";
-  
-  const rows = [
-    "Q W E R T Z U I O P".split(" "),
-    "A S D F G H J K L".split(" "),
-    "Y X C V B N M".split(" ")
-  ];
-  
-  rows.forEach(row => {
-    const rowDiv = document.createElement("div");
-    rowDiv.className = "key-row";
-    row.forEach(key => {
-      const keyElement = document.createElement("div");
-      keyElement.className = "key";
-      keyElement.textContent = key;
-      keyElement.dataset.key = key;
-      keyElement.onclick = () => handleKeyPress(key);
-      rowDiv.appendChild(keyElement);
-    });
-    keyboard.appendChild(rowDiv);
-  });
-}
+
 
 // Event listener for Enter key on buttons within overlays
 document.addEventListener('keydown', function(event) {
@@ -308,9 +284,33 @@ document.addEventListener("keydown", event => {
 document.addEventListener('DOMContentLoaded', function() {
   setupVolumeControl();
   setupSFXVolumeControl();
+
+  document.querySelectorAll('.key').forEach(key => {
+    key.addEventListener('click', () => handleKeyPress(key.dataset.key));
+  });
 });
 
 function redirect() {
   stopBackgroundMusic();
   window.location.href = "https://www.shardsofgalactica.org/";
 }
+
+// Function to toggle mute
+function toggleMute() {
+  const isMuted = backgroundMusic.muted;
+
+  // Toggle background music mute
+  backgroundMusic.muted = !isMuted;
+
+  // Toggle SFX mute
+  successSound.muted = !isMuted;
+  errorSound.muted = !isMuted;
+  winSound.muted = !isMuted;
+  loseSound.muted = !isMuted;
+
+  // Update the mute button text
+  document.getElementById('muteButton').textContent = isMuted ? '[Mute]' : '[Unmute]';
+}
+
+// Event listener for mute button
+document.getElementById('muteButton').addEventListener('click', toggleMute);
