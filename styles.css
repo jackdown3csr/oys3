@@ -24,8 +24,11 @@ html, body {
 }
 
 #gameTitle {
-  font-size: 4vw;
-  margin-bottom: 10px;
+  display: inline-block;
+  align-items: center;
+  white-space: nowrap;
+  font-size: clamp(2rem, 8vw, 4rem);
+  min-height: 150px;
 }
 
 #overlays > div {
