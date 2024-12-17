@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>OYS2 LexiLab</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -12,39 +12,53 @@
 
   <!-- Overlays -->
   <div id="overlays">
-    <div id="howToPlay" style="display: block;">
+    <div id="howToPlay" class="overlay" style="display: block;">
       <h2>== OYS2 SYSTEM MESSAGE == </h2>
-     
       <p>You have accessed LexiLab, a recovered module from the OYS2 archives. Your mission: decrypt encrypted terms sourced from deep within GALACTICA's network. Limited attempts. Failure is not an option.</p>
       <button class="game-button" onclick="startGame()">Start Game</button>
     </div>
-    <div id="gameOver" style="display: none;">
+    <div id="gameOver" class="overlay" style="display: none;">
       <h2>== OYS2 SYSTEM MESSAGE ==</h2>
       <p>It seems the OYS2 system has outpaced you this time. The puzzle remains unsolved... You must try again to decrypt the remaining terms and complete your mission. Time is of the essence.</p>
       <button class="game-button" onclick="restartGame()">Try Again</button>
     </div>
-    
-    <div id="gameWin" style="display: none;">
+    <div id="gameWin" class="overlay" style="display: none;">
       <h2>== OYS2 SYSTEM MESSAGE ==</h2>
-      <p>
-        You successfully decrypted the network's deepest secrets, but the gate has already closed. For now, its mysteries remain beyond reach. 
-        Take pride in your success—another opportunity may arise when the stars align again. Until then, stay vigilant and ready.</p>
+      <p>You successfully decrypted the network's deepest secrets, but the gate has already closed. For now, its mysteries remain beyond reach. Take pride in your success—another opportunity may arise when the stars align again. Until then, stay vigilant and ready.</p>
       <button class="game-button" onclick="redirect()">At least show me </button>
     </div>
+  </div>
 
   <!-- Game Area -->
   <div id="gameArea" style="display: none;">
     <div class="game-content">
-      <p id="attempts">Attempts Remaining: 7</p>
       
       <div class="word-container">
+        <p id="attempts">Attempts Remaining: 7</p>
         <div id="word">
           <!-- letters here -->
         </div>
       </div>
       <div id="hint">Hint: </div>
+      <div id="level">
+        <p id="level">Level: 1</p>
+      </div>
     </div>
-
+  
+    <!-- Controls and Keyboard -->
+    <div class="gamecontrols">
+    <div class="controls">
+        <div id="soundvolume">
+        <span>music</span>
+        <input type="range" id="soundslider" class="slider" min="0" max="100" value="50">
+        </div>
+      <div id="sfxvolume">
+        <span>sound</span>
+        <input type="range" id="sfxslider" class="slider" min="0" max="100" value="50">
+      </div>
+      <div id="muteButton" style="position: static; cursor: pointer;">[Mute]</div>
+    </div>
+  
     <div class="keyboard" id="keyboard">
       <div class="key-row">
         <div class="key" data-key="Q">Q</div>
@@ -68,6 +82,7 @@
         <div class="key" data-key="J">J</div>
         <div class="key" data-key="K">K</div>
         <div class="key" data-key="L">L</div>
+        <div class="keyDummy" data-key=""></div>
       </div>
       <div class="key-row">
         <div class="keyDummy" data-key=""></div>
@@ -81,27 +96,12 @@
         <div class="keyDummy" data-key=""></div>
       </div>
     </div>
-
-
-  
-    <div class="controls" style="display: flex; flex-direction: column;">
-      <div id="level">
-        <p id="level">Level: 1</p>
-      </div>
-      <div id="soundvolume">
-        <span>music</span>
-        <input type="range" id="soundslider" class="slider" min="0" max="100" value="50">
-      </div>
-      <div id="sfxvolume">
-        <span>sound</span>
-        <input type="range" id="sfxslider" class="slider" min="0" max="100" value="50">
-      </div>
-      <div id="muteButton" style="position: static; cursor: pointer;">[Mute]</div>
-    </div>
-
+  </div>
+</div>
+  </div>
+  </div>
   <!-- Hidden audio element for background music -->
   <audio id="bgMusic" style="display:none;"></audio>
-
   <script src="script.obfuscated.js"></script>
 </body>
 </html>
