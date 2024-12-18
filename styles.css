@@ -27,7 +27,7 @@ html, body {
   display: inline-block;
   align-items: center;
   white-space: nowrap;
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(vw, 4vw, 8vw);
   min-height: 150px;
   margin-top: 50px;
 }
@@ -109,7 +109,7 @@ html, body {
 
 .key:hover:not(.disabled) {
   background-color: #D47756;
-  transform: scale(1.15);
+  transform: scale(1.2);
   box-shadow: 0 0 10px #D47756;
 }
 
@@ -124,7 +124,7 @@ html, body {
   justify-content: center;
   font-weight: bold;
   margin: 30px 0;
-  font-size: clamp(2vw, 6vw, 8vw);
+  font-size: clamp(1vw, 3vw, 6vw);
 }
 
 #gameArea {
@@ -151,7 +151,7 @@ html, body {
   display: inline-block;
   align-items: center;
   white-space: nowrap;
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(2vw, 4vw, 8vw);
   font-weight: bold;
   text-shadow: 2px 2px 4px #522200;
   padding: 6px;
@@ -162,14 +162,14 @@ html, body {
 }
 
 #attempts {
-  font-size: clamp(2vw, 6vw, 8vw);
+  font-size: clamp(1vw, 3vw, 6vw);
   margin-top: 0;
   margin-bottom: 5px;
 }
 
 #hint {
   display: block;
-  font-size: clamp(2vw, 6vw, 8vw);
+  font-size: clamp(1vw, 3vw, 6vw);
   font-style: italic;
   color: #f49756;
   padding: 6px;
@@ -179,7 +179,7 @@ html, body {
 .word-container {
   width: 100%;
   text-align: center;
-  font-size: clamp(2vw, 6vw, 8vw);
+  font-size: clamp(1vw, 3vw, 6vw);
 }
 
 #word .letter.letter-reveal {
@@ -207,7 +207,7 @@ html, body {
 }
 
 #gameOver h2, #gameWin h2, #howToPlay h2 {
-  font-size: clamp(1rem, 1.5rem, 2rem);
+  font-size: clamp(1vw, 3vw, 6vw);
   margin: 10px 0;
   max-width: 80%;
   overflow: hidden;
@@ -221,7 +221,7 @@ html, body {
   white-space: normal;
   max-width: 80%;
   margin: 20px auto;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1vw, 3vw, 6vw);
   text-align: center;
   word-wrap: break-word;
   word-break: break-word;
@@ -231,7 +231,7 @@ html, body {
   background-color: #D47756;
   border: none;
   border-radius: 5px;
-  font-size: 1.5vw;
+  font-size: clamp(1vw, 3vw, 6vw);
   cursor: pointer;
   color: #FDFCFB;
   text-shadow: 0px 0px 3px #000000;
