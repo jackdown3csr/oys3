@@ -184,7 +184,7 @@ function nextLevel() {
   currentHint = wordsAndHints[level].hint;
   
   initializeWord();
-  document.getElementById("hint").textContent = `Hint: ${currentHint}`;
+  document.getElementById("hint").textContent = `${currentHint}`;
   updateUI();
 }
 
