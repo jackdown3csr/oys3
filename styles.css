@@ -58,7 +58,7 @@ html, body {
   transform: translateX(-50%); /* Adjust for centering */
   /*z-index: 100; /* Ensure it stays above other content */
   margin-top: 0; /* Remove any margin that might cause a gap */
-  padding-top: 0; /* Remove any padding that might cause a gap */
+  padding-top: 1%; /* Remove any padding that might cause a gap */
 }
 
 .key-row {
@@ -89,24 +89,12 @@ html, body {
   align-items: center;
 }
 
-.keyDummy {
-  background-color: #1a1a1a;
-  border: none;
-  border-radius: 6px;
+#Dummy {
+  background: transparent; /* or match the background color */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Lighter and more transparent */
   font-size: 2.5rem;
   cursor:not-allowed;
-  color: #666666;
-  text-shadow: 0px 0px 3px #000000;
-  padding: 8px;
-  box-shadow: 0 0 5px #666666;
-  background: linear-gradient(145deg, #D25646, #D47756);
-  transform: scale(1);
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  width: 10%;
-  height: 40px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .key:hover:not(.disabled) {
@@ -290,7 +278,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 10px; /* Adjust the gap as needed */
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .slider {
@@ -366,14 +354,7 @@ margin-bottom: 100px;
     height: 35px;
   }
 
-  .keyDummy {
-    width: auto;
-    flex: 1;
-    font-size: 1.5rem;
-    padding: 6px;
-    width: 12%;
-    height: 35px;
-  }
+  
   .keyboard {
     width: 96%;
     min-width: 315px;

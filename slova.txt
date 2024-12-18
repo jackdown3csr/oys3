@@ -9,44 +9,92 @@ CypherCapital, remember... is the key
 Kryptos, nice statue
 Rug Pull, destiny of bad projects
 Starbase, testing environment
-Galactica,The name of the network  
-Cypher State,On-chain nation concept  
-DeSoc,Decentralized society abbreviation  
-zkKYC,Zero-knowledge identity verification  
-Sybil Resistance,Preventing fake identities  
-DeFi,Decentralized finance  
-Zero Knowledge,Type of cryptography  
-Compliance,Adherence to regulations  
-Privacy,Protection of personal information  
-Identity,User's digital persona  
-Reputation,User's standing in the network  
-Devnet,Development network  
-Whitepaper,Document outlining the project's vision  
-Oracle,Knowledge base tool  
-Sentinel,Defender in the Cypher State  
-Passport,Digital identification document  
-Citizenship,Membership in the Cypher State  
-Research,Study of privacy and cryptography  
-Newsroom,Latest updates and announcements  
-Governance,System of rules and policies  
-Cryptography,Secure communication technique  
-Blockchain,Distributed ledger technology  
-Protocol,Set of rules for data exchange  
-Network,System of interconnected nodes  
-Vision,Project's long-term goal  
-Mission,Project's purpose and objectives  
-Strategy,Plan to achieve goals  
-Technology,Application of scientific knowledge  
-Development,Process of creating the network  
-Launch,Introduction of the network  
-Adoption,Acceptance by users  
-Integration,Combining with other systems  
-Scalability,Ability to handle growth  
-Efficiency,Optimal use of resources  
-Transparency,Openness in operations  
-Collaboration,Working together  
-Ecosystem,Network's environment  
-Sovereignty,Self-governance  
+Reticulum,Name of the testnet blochchain  
+Cypher,Encrypted identity system  
+zkKYC,Privacy-focused identity verification  
+Reputation,Digital trust score  
+Citizen,Member of the Cypher State  
+Governance,Decision-making system  
+Sybil,Fake identity attack  
+Validator,Node ensuring network security  
+Consensus,Agreement in blockchain  
+Protocol,Rules of a blockchain network  
+Network,System of connected nodes  
+Privacy,Protection of personal data  
+Identity,Digital representation of a person  
 Community,Group of network participants  
-Innovation,Introduction of new ideas  
-Security,Measures to protect data  
+Blockchain,Distributed ledger technology  
+Compliance,Following rules and standards  
+Innovation,Creating new ideas or solutions  
+Efficiency,Optimized use of resources  
+Transparency,Openness and clarity  
+Integration,Connecting multiple systems  
+Collaboration,Working together on tasks  
+Security,Protecting data or systems  
+Technology,Application of scientific knowledge  
+Metadata,Data about other data  
+Registry,Record-keeping system  
+Democracy,Governance by the people  
+SBT,Soulbound token for identity  
+zkNFT,Privacy-focused non-transferable token  
+Meritocracy,System based on merit or skill  
+Quadratic,Mathematical voting system  
+Transactions,Exchanges on a blockchain  
+Universal,Applies to everyone or everything  
+Income,Regular payment or earnings  
+Custodian,Entity managing resources securely  
+Persistent,Lasting or ongoing  
+Footprint,Record of activity on Web3  
+Selective,Controlled disclosure of data  
+Augmented,Enhanced or improved  
+Societal,Related to society  
+Framework,Structure or model  
+Validator,Verifies blockchain transactions  
+Encrypted,Secured with cryptography  
+Optimization,Making systems more efficient  
+Ecosystem,Network environment  
+Reputation,Trust based on activity  
+Mechanisms,Processes for functionality  
+Efficiency,Effective use of resources  
+Operations,Functions or tasks in a system  
+Guardians,Protectors in the network  
+Sovereignty,Control or independence  
+Contracts,Agreements enforced digitally  
+Ledger,Record of transactions  
+DeSoc,Decentralized society concept  
+DePol,Decentralized politics concept  
+GNET,Token of the Galactica network  
+SybilProof,Prevention of fake identities  
+Governance,Management and decision-making  
+Compliance,Adherence to rules  
+Integration,Bringing together systems  
+Resilience,Ability to recover quickly  
+Interaction,User actions in Web3  
+MeritDriven,Based on contributions  
+Reputation,Trust score in the system  
+Quadratic,Mathematical system for fairness  
+Voting,Decision-making by choice  
+Framework,Underlying structure  
+Universal,For everyone without exception  
+Metadata,Data that describes other data  
+Security,Protecting assets and information  
+Innovation,Creating something new  
+Transparency,Being open and clear  
+Development,Improvement or progress  
+Reputation,Trust built through actions  
+Citizenship,Being a member of a community  
+Protocol,Set of rules in a system  
+Privacy,Keeping data confidential  
+Collaboration,Working together to achieve goals  
+Efficiency,Achieving results with minimal waste  
+Adoption,Becoming widely used  
+Validator,Ensures correctness of transactions  
+Interaction,How users engage with the system  
+Reputation,Trustworthiness in a system  
+Encryption,Securing data from unauthorized access  
+Sybil,Preventing multiple fake identities  
+Consensus,Agreement across participants  
+Identity,Who someone is digitally  
+Compliance,Meeting required standards  
+Merit,Recognition for contributions  
+Governance,Management of a system  
