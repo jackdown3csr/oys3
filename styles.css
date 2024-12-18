@@ -266,9 +266,6 @@ html, body {
   padding: 5px;
 }
 
-
-
-
 .soundcontrols {
   display: flex;
   flex-wrap: nowrap;
@@ -379,6 +376,7 @@ margin-bottom: 100px;
   }
   .keyboard {
     width: 96%;
+    min-width: 315px;
   }
   #gameOver, #gameWin, #howToPlay {
     width: 90%;

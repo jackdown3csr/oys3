@@ -9,3 +9,44 @@ CypherCapital, remember... is the key
 Kryptos, nice statue
 Rug Pull, destiny of bad projects
 Starbase, testing environment
+Galactica,The name of the network  
+Cypher State,On-chain nation concept  
+DeSoc,Decentralized society abbreviation  
+zkKYC,Zero-knowledge identity verification  
+Sybil Resistance,Preventing fake identities  
+DeFi,Decentralized finance  
+Zero Knowledge,Type of cryptography  
+Compliance,Adherence to regulations  
+Privacy,Protection of personal information  
+Identity,User's digital persona  
+Reputation,User's standing in the network  
+Devnet,Development network  
+Whitepaper,Document outlining the project's vision  
+Oracle,Knowledge base tool  
+Sentinel,Defender in the Cypher State  
+Passport,Digital identification document  
+Citizenship,Membership in the Cypher State  
+Research,Study of privacy and cryptography  
+Newsroom,Latest updates and announcements  
+Governance,System of rules and policies  
+Cryptography,Secure communication technique  
+Blockchain,Distributed ledger technology  
+Protocol,Set of rules for data exchange  
+Network,System of interconnected nodes  
+Vision,Project's long-term goal  
+Mission,Project's purpose and objectives  
+Strategy,Plan to achieve goals  
+Technology,Application of scientific knowledge  
+Development,Process of creating the network  
+Launch,Introduction of the network  
+Adoption,Acceptance by users  
+Integration,Combining with other systems  
+Scalability,Ability to handle growth  
+Efficiency,Optimal use of resources  
+Transparency,Openness in operations  
+Collaboration,Working together  
+Ecosystem,Network's environment  
+Sovereignty,Self-governance  
+Community,Group of network participants  
+Innovation,Introduction of new ideas  
+Security,Measures to protect data  
