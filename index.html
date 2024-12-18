@@ -46,20 +46,26 @@
     </div>
   
     <!-- Controls and Keyboard -->
-    <div class="gamecontrols">
-    <div class="controls">
-        <div id="soundvolume">
-        <span>music</span>
-        <input type="range" id="soundslider" class="slider" min="0" max="100" value="50">
-        </div>
-      <div id="sfxvolume">
-        <span>sound</span>
-        <input type="range" id="sfxslider" class="slider" min="0" max="100" value="50">
-      </div>
-      <div id="muteButton" style="position: static; cursor: pointer;">[Mute]</div>
-    </div>
+   
+      <!-- Slider for Music -->
+      
   
     <div class="keyboard" id="keyboard">
+
+      <div class="soundcontrols">
+        <div class="slider-container">
+          <span>music</span>
+          <input type="range" id="soundslider" class="slider" min="0" max="100" value="50">
+        </div>
+        <!-- Slider for Sound Effects -->
+        <div class="slider-container">
+          <span>sound</span>
+          <input type="range" id="sfxslider" class="slider" min="0" max="100" value="50">
+        </div>
+        <!-- Mute Button -->
+        <div id="muteButton" style="cursor: pointer;">[Mute]</div>
+        </div>
+
       <div class="key-row">
         <div class="key" data-key="Q">Q</div>
         <div class="key" data-key="W">W</div>
@@ -96,6 +102,7 @@
         <div class="keyDummy" data-key=""></div>
       </div>
     </div>
+  
   </div>
 </div>
   </div>
